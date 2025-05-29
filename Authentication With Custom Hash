@@ -12,7 +12,7 @@ end;
 /
 
 
-2. Create a Trigger to the User Table:
+2. Create a Trigger to the ACL/APP_USERS Table:
 
 create or replace TRIGGER  "USER_PASSWORD_HASH"  
 BEFORE INSERT OR UPDATE of PASSWORD    
@@ -37,7 +37,7 @@ create or replace function CUSTOM_AUTH (p_username in VARCHAR2, p_password in VA
   l_stored_password varchar2(4000);
   l_count number;
 begin
-   -- First, check to see if the user exists in the APP_USERS table
+   -- First, check to see if the user exists in the ACL/APP_USERS table
    select count(*) into l_count from MFA_USERS where email = p_username;
    if l_count > 0 then
       -- Fetch the stored hashed password
@@ -54,7 +54,7 @@ begin
         return false;
       end if;
    else
-     -- User doesn’t exist in the APP_USERS table, so
+     -- User doesn’t exist in the ACL/APP_USERS table, so
      return false;
    end if;
 end;
