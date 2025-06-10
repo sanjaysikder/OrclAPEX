@@ -1,0 +1,23 @@
+
+
+1. Add Below Code on Page HTML Header (Page > HTML Header):
+
+                                                                           
+<video autoplay loop id ="video-background"  muted plaus-inline>
+<source src="#APP_IMAGES#Beach Animated Background.mp4" type="video/mp4">
+</video>
+
+
+2. Add below css code on Page Inline (Page > Inline):
+
+  video{
+    position:fixed;
+    min-width:100%;
+    max-width:100%
+    width:auto;
+    height:auto;
+    z-index:-500;
+  }
+.t-Login-header {
+    display: none;
+}
