@@ -1,0 +1,13 @@
+This login process is designed for e-commerce website registration and automatic login to the system.
+
+Post login Process: 
+
+        APEX_AUTHENTICATION.POST_LOGIN (
+         p_username => upper(:P5_EMAIL),
+         p_password => :P5_PASSWORD,
+         p_uppercase_username => TRUE ); 
+        
+              -- Redirect to external page with APEX session appended
+              APEX_UTIL.REDIRECT_URL(
+                p_url => 'https://g5b362551d8c200-sanjaysikder.adb.ap-mumbai-1.oraclecloudapps.com/ords/r/sanjay_sikder/SCHOOL/home?session=' || :APP_SESSION
+              );
