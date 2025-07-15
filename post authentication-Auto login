@@ -2,9 +2,8 @@
 
 This login process is designed for e-commerce website registration and automatic login to the system.
 
-## Post-Login Process Code
+## Post-Login Process Code:
 
-```sql
 APEX_AUTHENTICATION.POST_LOGIN (
     p_username => upper(:P5_EMAIL),
     p_password => :P5_PASSWORD,
