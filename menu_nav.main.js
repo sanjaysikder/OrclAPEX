@@ -1,0 +1,1 @@
+!function(n){n(window).on("theme42ready",(function(){n(".t-PageBody").hasClass("js-navExpanded")&&n("#t_Button_navControl").click(),n(".apex-side-nav .t-Body-nav").hover((function(){n(".t-PageBody:not(.js-navExpanded) #t_Button_navControl").click()}),(function(){n("#t_Button_navControl").click()}))}))}(apex.jQuery);
